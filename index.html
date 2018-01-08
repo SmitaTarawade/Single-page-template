@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Smita Tarawade</title>
+		<link rel="shortcut icon" href="images/code.png">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js"></script>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+		<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	</head>
+	<body>
+		<div id="home" class="tabs">
+			<div id="social">
+			<ul>
+				<li><a href="#"><img id="fb" src="images/fb.png" width="50px" height="50px"></a></li>
+				<li><a href="#"><img src="images/ig.png" width="50px" height="50px"></a></li>
+				<li><a href="#"><img src="images/li.png" width="50px" height="50px"></a></li>
+				<li><a href="#"><img src="images/email.png" width="50px" height="50px"></a></li>
+			</ul>
+			</div>
+			<div id="tagline"><h1>Smita Tarawade</h1>
+			<p>Designer | Developer</p>
+			</div>
+			
+			<div class="bouncer">&#9660;</div>
+		</div>
+		<div id="menu" class="tabs row">
+			<div class="sections col-sm-4" id="sec1">
+				<div></div>
+				<h3>Feugiat posuere</h3>
+				<p>Ornare nulla proin odio consequat sapien vestibulum ipsum primis sed amet consequat lorem dolore.</p>
+			</div>
+			<div class="sections col-sm-4" id="sec2">
+				<div></div>
+				<h3>Lorem dolor tempus</h3>
+				<p>Ornare nulla proin odio consequat sapien vestibulum ipsum primis sed amet consequat lorem dolore.</p>
+			</div>
+			<div class="sections col-sm-4" id="sec3">
+				<div></div>
+				<h3>Consequat lorem</h3>
+				<p>Ornare nulla proin odio consequat sapien vestibulum ipsum primis sed amet consequat lorem dolore.</p>
+			</div>
+		</div>
+		<div id="footer">
+			<p class="copyright">&copy 2016 Smita Tarawade by ST Studio</p>
+			<div class="links">
+				<ul>
+				<li><a href="#">Home</a> &bull;</li>
+				<li><a href="#">Services</a> &bull;</li>
+				<li><a href="#">About </a> &bull;</li>
+				<li><a href="#">Testinomials</a> &bull;</li>
+				<li><a href="#">Events</a> &bull;</li>
+				<li><a href="#">Contact</a> &bull;</li>				
+				</ul>
+			</div>
+			<div class="up">&#9650;</div>
+			<hr style="margin:0;">
+		</div>
+		<script>
+			$(document).ready(function(){
+				loop();	
+			});
+			function loop() {
+				$('.bouncer').animate({'margin-top': '310px'}, {
+					duration: 1000, 
+					complete: function() {
+				$('.bouncer').animate({'margin-top': '325px'}, {
+					duration: 1000, 
+					complete: loop});
+				}});
+			}
+			$('.bouncer').click(function(){
+				$('html, body').animate({
+					scrollTop: 729
+				}, 1000);												
+				return false;
+			});
+			$('.up').click(function(){
+				$('html, body').animate({
+					scrollTop: 0
+				}, 1000);												
+				return false;
+			});
+			$(window).on('beforeunload', function(){
+				$(window).scrollTop(0);
+			});
+			
+		</script>
+		
+		
+	</body>
+ 
+</html>
